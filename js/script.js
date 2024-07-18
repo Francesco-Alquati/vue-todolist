@@ -12,7 +12,7 @@ const todo = [
     {
         id: 3,
         Text:'Fare 30 minuti di attività fisica',
-        done: true
+        done: false
     },
     {
         id: 4,
@@ -27,12 +27,12 @@ const todo = [
     {
         id: 6,
         Text:'Andare dal parrucchiere',
-        done: true
+        done: false
     },
     {
         id: 7,
         Text:'Preparare la cena',
-        done: true
+        done: false
     }
 ]
 
@@ -48,6 +48,9 @@ createApp({
     methods: {
         toggleTodo(task) {
             task.done = !task.done;
+        },
+        removeTodo(task) {
+            this.todolist = this.todolist.filter(item => item !== task);
         },
     },
 }).mount('#app')
