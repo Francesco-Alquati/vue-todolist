@@ -62,7 +62,8 @@ createApp({
                     id: Math.max(...this.todolist.map(todo => todo.id)) + 1,
                     // assegno il valore digitato dall'utente come Text
                     Text: this.newTodoText,
-                    
+                    // inizializzo done a false 
+                    done: false,
                 });
                 
             }
