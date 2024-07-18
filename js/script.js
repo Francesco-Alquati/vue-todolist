@@ -60,6 +60,8 @@ createApp({
                 this.todolist.push({
                     // genero un nuovo identificatore unico per il todo,uso Math.max per trovare l'id massimo tra quelli esistenti e aggiungo 1 per ottenere un nuovo valore univoco.
                     id: Math.max(...this.todolist.map(todo => todo.id)) + 1,
+                    // assegno il valore digitato dall'utente come Text
+                    Text: this.newTodoText,
                     
                 });
                 
