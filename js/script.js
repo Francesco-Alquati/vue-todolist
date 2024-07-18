@@ -43,10 +43,12 @@ createApp({
     data(){
         return{
             todolist: todo,
-        }
+        };
     },
     methods: {
-
-    }
+        toggleTodo(task) {
+            task.done = !task.done;
+        },
+    },
 }).mount('#app')
 
