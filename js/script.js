@@ -58,9 +58,10 @@ createApp({
             if (this.newTodoText.trim()) {
                 // se è vero quindi è stato digitato del testo aggiungo un nuovo elemento a todolist
                 this.todolist.push({
+                    // genero un nuovo identificatore unico per il todo,uso Math.max per trovare l'id massimo tra quelli esistenti e aggiungo 1 per ottenere un nuovo valore univoco.
+                    id: Math.max(...this.todolist.map(todo => todo.id)) + 1,
                     
                 });
-                
                 
             }
         },
