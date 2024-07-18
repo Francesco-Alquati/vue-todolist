@@ -56,6 +56,11 @@ createApp({
         addTodo() {
             // controllo se il valore di newTodoText è vuoto o contiene solo spazi bianchi
             if (this.newTodoText.trim()) {
+                // se è vero quindi è stato digitato del testo aggiungo un nuovo elemento a todolist
+                this.todolist.push({
+                    
+                });
+                
                 
             }
         },
