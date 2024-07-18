@@ -45,8 +45,8 @@
                                 </li>
                             </ul>
                             <div class="d-flex">
-                                <input type="text" class="form-control" placeholder="Nuovo task">
-                                <button class="btn-add-task">Aggiungi</button>
+                                <input type="text" class="form-control" placeholder="Nuova task" v-model="newTodoText">
+                                <button class="btn-add-task" @click="addTodo">Aggiungi</button>
                             </div>
                         </div>
                     </div>

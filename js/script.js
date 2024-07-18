@@ -43,6 +43,7 @@ createApp({
     data(){
         return{
             todolist: todo,
+            newTodoText: '',
         };
     },
     methods: {
@@ -51,6 +52,12 @@ createApp({
         },
         removeTodo(task) {
             this.todolist = this.todolist.filter(item => item !== task);
+        },
+        addTodo() {
+            // controllo se il valore di newTodoText è vuoto o contiene solo spazi bianchi
+            if (this.newTodoText.trim()) {
+                
+            }
         },
     },
 }).mount('#app')
