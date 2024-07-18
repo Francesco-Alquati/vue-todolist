@@ -65,7 +65,8 @@ createApp({
                     // inizializzo done a false 
                     done: false,
                 });
-                
+                // dopo aver aggiunto il nuovo task alla lista azzero il valore di newTodoText, cosi l'utente può continuare ad aggiungere nuove task
+                this.newTodoText = '';
             }
         },
     },
