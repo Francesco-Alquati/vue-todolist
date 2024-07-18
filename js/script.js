@@ -1,37 +1,37 @@
 const todo = [
     {
         id: 1,
-        Text:'ciao',
+        Text:'Fare la spesa',
         done: false
     },
     {
         id: 2,
-        Text:'ciao',
+        Text:'Portare a spasso il cane',
         done: false
     },
     {
         id: 3,
-        Text:'ciao',
+        Text:'Fare 30 minuti di attività fisica',
         done: true
     },
     {
         id: 4,
-        Text:'ciao',
+        Text:'Andare dal dottore',
         done: false
     },
     {
         id: 5,
-        Text:'ciao',
+        Text:'Chiamare Riccardo',
         done: false
     },
     {
         id: 6,
-        Text:'ciao',
+        Text:'Andare dal parrucchiere',
         done: true
     },
     {
         id: 7,
-        Text:'ciao',
+        Text:'Preparare la cena',
         done: true
     }
 ]
