@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="text-uppercase fs-2 text-center text-danger"> <i class="fa-brands fa-slack text-danger"></i> Vue Tooboolist</h2>
+                        <h2 class="text-uppercase fs-2 text-center text-danger"> <i class="fa-brands fa-slack text-danger"></i> Vue Todolist</h2>
                     </div>
                 </div>
             </div>
@@ -25,9 +25,9 @@
                     <div class="col-12">
                         <div class="todo-list">
                             <ul class="list-unstyled">
-                                <li v-for="task in todolist" :key="task.id">
+                                <li v-for="task in todolist">
                                     <div class="d-flex justify-content-between fs-4">
-                                        <div class="todo-text" :class="{ done: task.done }">
+                                        <div class="todo-text" :class="task.done ? 'text-decoration-line-through' :''">
                                             {{ task.Text }}
                                         </div>
                                         <div class="buttons">

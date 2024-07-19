@@ -42,6 +42,3 @@ ul li:last-child{
     background-color: #b16d00;
     border: 1px solid #b16d00;
 }
-.done {
-    text-decoration: line-through;
-}

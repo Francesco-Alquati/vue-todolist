@@ -2,37 +2,44 @@ const todo = [
     {
         id: 1,
         Text:'Fare la spesa',
-        done: false
+        done: false,
+        
     },
     {
         id: 2,
         Text:'Portare a spasso il cane',
-        done: false
+        done: false,
+        
     },
     {
         id: 3,
         Text:'Fare 30 minuti di attività fisica',
-        done: false
+        done: false,
+        
     },
     {
         id: 4,
         Text:'Andare dal dottore',
-        done: false
+        done: false,
+        
     },
     {
         id: 5,
         Text:'Chiamare Riccardo',
-        done: false
+        done: false,
+        
     },
     {
         id: 6,
         Text:'Andare dal parrucchiere',
-        done: false
+        done: false,
+        
     },
     {
         id: 7,
         Text:'Preparare la cena',
-        done: false
+        done: false,
+        
     }
 ]
 
@@ -43,7 +50,7 @@ createApp({
     data(){
         return{
             todolist: todo,
-            newTodoText: '',
+            newTodoText: null,
         };
     },
     methods: {
@@ -51,11 +58,14 @@ createApp({
             task.done = !task.done;
         },
         removeTodo(task) {
-            this.todolist = this.todolist.filter(item => item !== task);
+            if(confirm('sei sicuro di voler cancellare questa task?')){
+
+                this.todolist = this.todolist.filter(item => item !== task);
+            }
         },
         addTodo() {
-            // controllo se il valore di newTodoText è vuoto o contiene solo spazi bianchi
-            if (this.newTodoText.trim()) {
+            // controllo se il valore di newTodoText è vuoto o sono solo spazi vuoti
+            if (this.newTodoText != null && this.newTodoText.trim()  ) {
                 // se è vero quindi è stato digitato del testo aggiungo un nuovo elemento a todolist
                 this.todolist.push({
                     // genero un nuovo identificatore unico per il todo,uso Math.max per trovare l'id massimo tra quelli esistenti e aggiungo 1 per ottenere un nuovo valore univoco.
@@ -66,7 +76,10 @@ createApp({
                     done: false,
                 });
                 // dopo aver aggiunto il nuovo task alla lista azzero il valore di newTodoText, cosi l'utente può continuare ad aggiungere nuove task
-                this.newTodoText = '';
+                this.newTodoText = null;
+            }
+            else{
+                alert('inserisci del testo per aggiungere una nuova task');
             }
         },
     },
